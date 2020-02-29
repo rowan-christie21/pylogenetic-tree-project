@@ -1,4 +1,22 @@
 #---------------------------------------------------------
+#3/3/2020
+#tetM is a gene often related to antibiotic resistance.
+#In this analysis, I aim to investigate the phylogenetic
+#relationships between tetM bacteria and their level of
+#antibiotic resistance. There are many publicly available
+#studies with data on the tetM gene sequences of bacteria
+#and information on their level of antibiotic resitance -
+#I will aim to include these studies in my meta-analysis
+
+#To do this, I have searched through NCBI in the Nucleotide 
+#database using the keyword 'tetM', Which resulted in 36209 
+#records
+
+
+
+
+
+#---------------------------------------------------------
 #Process to create a phylogenetic tree for
 #bacterial genes with TetM gene
 #Dec 14 2020
