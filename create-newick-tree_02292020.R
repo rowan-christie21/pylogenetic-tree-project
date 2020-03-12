@@ -14,7 +14,6 @@ library(Biostrings)
 library(msa)
 library(ggplot2)
 library(ggtree)
-<<<<<<< HEAD
 library(rgl)
 
 #define path to sequence
@@ -154,28 +153,6 @@ create_tree <- function(path, model) {
 path <- "C:/Users/smc9227/Documents/bioinformatics_code_stuff/antibiotic_resistant_strains3.fasta"
 tree_test <- create_tree(path)
 
-phyDat_test <- convert_msa_to_phyDat(msa_test)
-
-
-
-#master function for creating newick tree
-create_phyDat <- function(path, model) {
-  the_msa <- msa_data(path)
-  the_phyDat <- convert_msa_to_phyDat(the_msa)
-  
-  #right now we only have phyDat function so far so return that
-  return(the_phyDat)
-}
-
-path <- "C:/Users/smc9227/Documents/bioinformatics_code_stuff/antibiotic_resistant_strains3.fasta"
-
-create_phyDat(path)
-
-
-
-
-#perform conversion function to phyDat class so phangorn can operate on it
-bact_phyDat <- msaConvert(bact_alignment, type="phangorn::phyDat")
 
 
 
