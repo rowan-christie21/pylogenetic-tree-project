@@ -149,7 +149,23 @@ cds_seq3 <- subseq(seq3, start = start3, end = end3)
 gb3_cds_tetM$translation
 cds_aa_seq3 <- Biostrings::translate(cds_seq3)
 
-msa_res <- msa(c(cds_seq1, cds_seq2))
+seqtest <- c(cds_seq1, cds_seq2, cds_seq3)
+
+msa_res <- msa(seqtest)
 print(msa_res)
 msaPrettyPrint(msa_res)
 texi2pdf("msa_res.tex", clean=TRUE)
+
+data(BLOSUM62)
+scores <- msaConservationScore(msa_res, BLOSUM62)
+
+msa_mask <- msa_res
+colM <- IRanges(start = 1, end = 100)
+colmask(msa_mask) <- colM
+
+unmasked(msa_mask)
+
+
+conmat <- consensusMatrix(msa_res)
+conmat[, 101:110]
+
